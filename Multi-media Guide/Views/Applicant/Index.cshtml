@@ -1,0 +1,286 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Multi-media Guide</title>
+    <link href="~/Content/main/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Content/main/js/jquery-1.11.0.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="~/Content/main/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/main/css/style1.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Tour Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--Google Fonts-->
+    <link href='//fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <!-- //end-smoth-scrolling -->
+    <script src="~/Content/main/js/responsiveslides.min.js"></script>
+    <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      $("#slider2").responsiveSlides({
+        auto: true,
+        pager: true,
+        speed: 300,
+        namespace: "callbacks",
+      });
+    });
+    </script>
+    <!-- requried-jsfiles-for owl -->
+    <link href="~/Content/main/css/owl.carousel.css" rel="stylesheet">
+    <script src="~/Content/main/js/owl.carousel.js"></script>
+    <script>
+				$(document).ready(function() {
+					$("#owl-demo").owlCarousel({
+						items : 3,
+						lazyLoad : true,
+						autoPlay : false,
+						pagination : true,
+					});
+				});
+    </script>
+    <!-- //requried-jsfiles-for owl -->
+    <!-- animated-css -->
+    <link href="~/Content/main/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="~/Content/main/js/wow.min.js"></script>
+    <script>
+		 new WOW().init();
+    </script>
+    <!-- animated-css -->
+</head>
+<body>
+    <!--header start here-->
+    <div class="banner">
+        <div class="header">
+            <div class="container">
+                <div class="header-main">
+                    <div class="logo wow bounceInLeft" data-wow-delay="0.3s">
+                        <a href="#"><img src="~/Content/main/images/logo2.png" alt=""></a>
+                    </div>
+                    <div class="top-navg">
+                        <span class="menu"> <img src="~/Content/main/images/icon.png" alt="" /></span>
+                        <nav class="cl-effect-13">
+                            <ul class="res">
+                                <li><a class="active" href="@Url.Action("Index", "Applicant")">Home</a></li>
+                                <li><a href="@Url.Action("About", "Applicant")">About</a></li>
+
+                                <li><a href="@Url.Action("Gallery", "Applicant")">Interviews</a></li>
+                                <li><a href="@Url.Action("Contact", "Applicant")">Contact</a></li>
+                                <li><a href="@Url.Action("Logout", "Applicant")">Logout</a></li>
+                                <li><p style="color: #ffd800; cursor: pointer;">Hi @Session["userId"]</p></li>
+                            </ul>
+                        </nav>
+                        <!-- script-for-menu -->
+                        <script>
+				   $( "span.menu" ).click(function() {
+					 $( "ul.res" ).slideToggle( 300, function() {
+					 // Animation complete.
+					  });
+					 });
+                        </script>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-main">
+            <div class="slider-bann wow bounceInRight" data-wow-delay="0.3s">
+                <ul class="rslides" id="slider2">
+                    <li>
+                        <h3>Welcome To Our Job Interview Guide</h3>
+                        <h4>The Best Way To Find Job Interviews</h4>
+                        <div class="ban-btn">
+                            <a href="@Url.Action("About","Applicant")" class="hvr-bounce-out">Load More</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Very Informative Information</h3>
+                        <h4>The Best Way To Find Job Interviews</h4>
+                        <div class="ban-btn">
+                            <a href="@Url.Action("About","Applicant")" class="hvr-bounce-out">Load More</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Best Information</h3>
+                        <h4>The Best Way To Find Job Interviews</h4>
+                        <div class="ban-btn">
+                            <a href="@Url.Action("About","Applicant")" class="hvr-bounce-out">Load More</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--what we do strat here-->
+    <div class="what-we-do">
+        <div class="container">
+            <div class="what-we-do-main  wow bounceInLeft" data-wow-delay="0.3s">
+                <h2>What We Do</h2>
+                <span class="lft-bar-we"> </span>
+                <span class="rit-bar-we"> </span>
+                <p>This Web Application Show some Interviews that needed by all new Applicant.</p>
+                
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--what we do end here-->
+    <!--peoples strat here-->
+    <!--peoples end here-->
+    <!--disk bar strat here-->
+    <!--disk bar end here-->
+    <!--features strat here-->
+    <div class="features">
+        <div class="container">
+            <div class="features-main">
+                <div class="features-top">
+                    <h3>Features</h3>
+                    <span class="lft-bar-fea"> </span>
+                    <span class="rit-bar-fea"> </span>
+                </div>
+                <div class="features-bottom">
+                    <div class="col-md-6 features-left wow bounceInLeft" data-wow-delay="0.3s">
+                        <div class="feature-grids">
+                            <div class="fea-img">
+                                <img src="~/Content/main/images/fe1.png" alt="">
+                            </div>
+                            <div class="fea-text">
+                                <h4>Job Destination</h4>
+                                <p>Showing exact location of every Job Destination.</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="feature-grids">
+                            <div class="fea-img">
+                                <img src="~/Content/main/images/fe2.png" alt="">
+                            </div>
+                            <div class="fea-text">
+                                <h4>Comfort</h4>
+                                <p>Giving an exact Information and a nice Interviews.</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 features-right wow bounceInRight" data-wow-delay="0.3s">
+                        <div class="feature-grids">
+                            <div class="fea-img">
+                                <img src="~/Content/main/images/fe3.png" alt="">
+                            </div>
+                            <div class="fea-text">
+                                <h4>Explore</h4>
+                                <p>Visiting our web application show your interest in exploration.</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="feature-grids">
+                            <div class="fea-img">
+                                <img src="~/Content/main/images/fe4.png" alt="">
+                            </div>
+                            <div class="fea-text">
+                                <h4>Travel</h4>
+                                <p>Being Ready To Travel in Job Exploration</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--features end here-->
+    <!--visit places strat here-->
+    <div class="visit">
+        <div class="container">
+            <div class="visit-main wow bounceInRight" data-wow-delay="0.3s">
+                <div class="visit-top">
+                    <h3>Job Interview</h3>
+                    <span class="lft-bar-visit"> </span>
+                    <span class="rit-bar-visit"> </span>
+                </div>
+                <div class="visit-bottom">
+                    <div class="col-md-4 visit-grid">
+                        <div class="item-1 item-type-spin">
+                            <a class="item-hover swipebox" href="@Url.Action("Gallery", "Applicant", new { town = "Education" })" data-title="Vigor">
+                                <div class="item-info">
+                                    <div class="headline">
+                                        Job Interview
+                                        <div class="line"></div>
+
+                                    </div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                            <div class="item-img">
+                                <img src="~/Content/main/images/educ.jpg" class="img-responsive" alt="" />
+                            </div>
+                        </div>
+                        <h4><a href="single.html">Education</a></h4>
+                        <p>The information in this category is all about in Education Job Interview only all the information inside of this are credit to the rightful owner.</p>
+
+                    </div>
+                    <div class="col-md-4 visit-grid">
+                        <div class="item-1 item-type-spin">
+                            <a class="item-hover swipebox" href="@Url.Action("Gallery", "Applicant", new { town = "Information Technology" })" data-title="Vigor">
+                                <div class="item-info">
+                                    <div class="headline">
+                                        Job Interview
+                                        <div class="line"></div>
+
+                                    </div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                            <div class="item-img">
+                                <img src="~/Content/main/images/IT.jpg" class="img-responsive" alt="" />
+                            </div>
+                        </div>
+                        <h4><a href="single.html">Information Technology</a></h4>
+                        <p>The information in this category is all about in Information Technology Job Interview only all the information inside of this are credit to the rightful owner.</p>
+
+                    </div>
+                    <div class="col-md-4 visit-grid">
+                        <div class="item-1  item-type-spin">
+                            <a class="item-hover swipebox" href="@Url.Action("Gallery", "Applicant", new { town = "Agriculture" })" data-title="Vigor">
+                                <div class="item-info">
+                                    <div class="headline">
+                                        Job Interview
+                                        <div class="line"></div>
+
+                                    </div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                            <div class="item-img">
+                                <img src="~/Content/main/images/agri.jpg" class="img-responsive" alt="" />
+                            </div>
+                        </div>
+                        <h4><a href="single.html">Agriculture</a></h4>
+                        <p>The information in this category is all about in Agriculture Job Interview only all the information inside of this are credit to the rightful owner.</p>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+    <!--visit places end here-->
+    <!--footer start here-->
+ 
+    <!--footer end here-->
+    <div class="copy-right wow bounceInLeft" data-wow-delay="0.3s">
+        <p> &copy; 2022 Multi-media Guide. All rights reserved |</p>
+    </div>
+</body>
+</html>

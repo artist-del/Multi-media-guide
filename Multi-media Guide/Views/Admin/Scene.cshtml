@@ -1,0 +1,358 @@
+﻿@model IEnumerable<Multi_media_Guide.Models.video_tbl>
+@{
+    ViewBag.Title = "Scene";
+    Layout = "~/Views/Shared/_Navbar.cshtml";
+}
+
+
+<style>
+    label {
+        color: black !important;
+        font-weight: bold;
+    }
+
+    .modal-header {
+        background-color: #1d1919 !important;
+    }
+
+        .modal-header h4 {
+            color: #ffffff;
+        }
+</style>
+<link href="~/Content/datatables.min.css" rel="stylesheet" />
+<script src="~/Scripts/datatables.min.js" defer></script>
+<!---Add-Modal-->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!--modal header-->
+            <div class="modal-header">
+                <h4>Add New Content</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form id="addNew" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
+                    <div class="form-group">
+                        <label for="tbl_title">TITLE</label>
+                        <input type="text" class="form-control" name="v_title" placeholder="Title" id="tbl_title" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tbl_description">DESCRIPTION</label>
+                        <textarea id="tbl_description" class="form-control" name="v_description" placeholder="Description" rows="2" cols="20"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tbl_destination">CATEGORY</label>
+                        <select name="v_category" class="form-control">
+                            <option>--SELECT--</option>
+                            <option>Education</option>
+                            <option>Information Technology</option>
+                            <option>Agriculture</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination_vid">FILE</label>
+                        <input type="file" class="form-control" name="ImageUpload" id="destination_vid" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="des_url">URL/LINK</label>
+                        <input type="text" class="form-control" name="v_video_link" id="des_url" placeholder="ex. www.youtube.com" />
+                    </div>
+                    <br />
+                    <button class="btn btn-primary">Save</button>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--Edit Modal-->
+<div class="modal fade" id="editModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Edit Content</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form id="addNew" method="post" enctype="multipart/form-data" onsubmit="return editPost(this)">
+                    <input type="hidden" id="ids" name="Id" />
+                    <div class="form-group">
+                        <label for="tbl_title">TITLE</label>
+                        <input type="text" class="form-control" name="v_title" placeholder="Title" id="v_title" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tbl_description">DESCRIPTION</label>
+                        <input type="text" class="form-control" name="v_description" placeholder="Description" id="v_description" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tbl_destination">CATEGORY</label>
+                        
+                        <select name="v_category" class="form-control">
+                            <option id="opt1" value="Education">Education</option>
+                            <option id="op2" value="Information Technology">Information Technology</option>
+                            <option id="op3" value="Agriculture">Agriculture</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination_vid">FILE</label>
+                        <input type="file" class="form-control" name="ImageUpload" id="destination_vid" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="des_url">URL/LINK</label>
+                        <input type="text" class="form-control" name="v_video_link" id="v_video_link" placeholder="ex. www.youtube.com" />
+                    </div>
+                    <br />
+                    <button class="btn btn-primary">Save</button>
+                </form>
+            </div>
+
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-----Delete Modal-->
+<div class="modal fade" id="delModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Delete Content</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <h2>Do you want to delete?</h2>
+                <input type="hidden" name="sceneryId" id="sceneId" />
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="delete">
+                    Delete
+                </button>
+                <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--View Modal-->
+<div class="modal fade" id="viewModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>View Content</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="vidData">
+                            <img src="" id="sibuyanImage" alt="Project 01" class="img-responsive thumbnailImage" width="100%" height="300px">
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div style="height: 150px; overflow-y: scroll;" id="scene-description">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-secondary" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Data</button>
+    </div>
+</div>
+
+<br />
+<br />
+<div class="table-responsive">
+    <table class="table" id="sceneTable">
+        <thead>
+            <tr>
+                <th>TITLE</th>
+                <th>DESCRIPTION</th>
+                <th>CATEGORY</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.v_title</td>
+                    <td>@item.v_description</td>
+                    <td>@item.v_category</td>
+                    <td>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="edit(@item.Id)"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+                        <button class="btn btn-info" data-toggle="modal" data-target="#viewModal" onclick="view(@item.Id)"><span class="glyphicon glyphicon-pencil"></span> View</button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#delModal" onclick="delContent(@item.Id)"><span class="glyphicon glyphicon-pencil"></span> Delete</button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<link href="~/Content/sweetalert2.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+        //paginate
+        $(document).ready(() => {
+            $('#sceneTable').DataTable();
+        })
+
+        //add
+        function AjaxPost(formData) {
+            var ajaxConfig = {
+                type: 'post',
+                url: '/Admin/Create',
+                data: new FormData(formData),
+                success: function (e) {
+                    if (e.status == true) {
+                        Swal.fire("Information", "Successfully Save!", "success").then(() => {
+                            window.location.href = "/Admin/Scene";
+                        });
+                    }
+                    else {
+                        alert("Something Wrong");
+                        window.location.href = "/Admin/Scene";
+                    }
+                }
+            }
+
+            if ($(formData).attr('enctype') == 'multipart/form-data') {
+                ajaxConfig['contentType'] = false;
+                ajaxConfig['processData'] = false;
+            }
+            $.ajax(ajaxConfig);
+            return false;
+        }
+
+        //passing id
+        function edit(data) {
+            var url = "/Admin/GetId?id=" + data;
+
+
+            $.ajax({
+                type: 'get',
+                url: url,
+                success: (response) => {
+                    var obj = JSON.parse(response);
+
+                    $('#ids').val(obj.Id);
+                    $('#v_title').val(obj.v_title);
+                    
+                    $('#v_description').val(obj.v_description);
+                    $('#v_category').val(obj.v_category);
+
+                    $('#v_video_link').val(obj.v_video_link);
+                }
+            })
+        }
+
+        //passing to view
+        function view(data) {
+            var url = "/Admin/GetId?id=" + data;
+
+
+
+            $.ajax({
+                type: 'get',
+                url: url,
+                success: (response) => {
+                    var obj = JSON.parse(response);
+
+                    $('#sibuyanImage').attr('src', '@Url.Content("~/AppFile/Scene/")' + obj.image_path);
+                    $('#scene-description').html('<p>"' + obj.v_description + '"</p><br><br><a href="'+obj.v_video_link+'" target="blank">'+obj.v_video_link+'</a>')
+
+                }
+            })
+        }
+
+        //edit
+        function editPost(formData) {
+            var ajaxConfig = {
+                type: 'post',
+                url: '/Admin/Update',
+                data: new FormData(formData),
+                success: function (e) {
+                    if (e.status == true) {
+                        Swal.fire("Information", "Successfully Updated!", "success").then(() => {
+                            window.location.href = "/Admin/Scene";
+                        });
+                    }
+                    else {
+                        alert("Something Wrong!");
+                    }
+                }
+            }
+
+            if ($(formData).attr('enctype') == 'multipart/form-data') {
+                ajaxConfig['contentType'] = false;
+                ajaxConfig['processData'] = false;
+            }
+            $.ajax(ajaxConfig);
+            return false;
+        }
+
+        //delete
+        function delContent(id){
+            $('#sceneId').val(id);
+
+        }
+
+        $('#delete').click(()=>{
+            let data = $('#sceneId').val();
+
+            $.ajax({
+                type: 'post',
+                url: '/Admin/delete?id='+data,
+                success: (e)=>{
+                    if(e.del == true){
+                        Swal.fire('Information','Successfully Deleted!','success').then(()=>{
+                            window.location.href="/Admin/Scene";
+                        })
+                    }
+                    else{
+                        Swal.fire('Information','Something Wrong!','warning').then(()=>{
+                            window.location.href="/Admin/Scene";
+                        })
+                    }
+                }
+            })
+        })
+</script>
+
+

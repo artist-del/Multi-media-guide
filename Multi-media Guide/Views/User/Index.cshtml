@@ -1,0 +1,150 @@
+﻿@model IEnumerable<Multi_media_Guide.Models.applicant_tbl>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Navbar.cshtml";
+}
+
+
+<style>
+    label {
+        color: black !important;
+        font-weight: bold;
+    }
+
+    .modal-header {
+        background-color: #1d1919 !important;
+    }
+
+        .modal-header h4 {
+            color: #ffffff;
+        }
+</style>
+<link href="~/Content/sweetalert2.css" rel="stylesheet" />
+<script src="~/Scripts/accountScript.js" defer></script>
+<link href="~/Content/datatables.min.css" rel="stylesheet" />
+<script src="~/Scripts/datatables.min.js" defer></script>
+<!---Edit Modal-->
+<div class="modal fade" id="editModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Edit Content</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form id="editForm">
+                    <input type="hidden" name="Id" value="" id="userId" />
+
+                    <div class="form-group">
+                        <label>FIRST NAME</label>
+                        <input type="text" name="f_name" id="tbl_name" placeholder="Name" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>MIDDLE NAME</label>
+                        <input type="text" name="m_name" id="tbl_middlename" placeholder="Middle Name" class="form-control" />
+                    </div>
+
+                    <div>
+                        <label>LAST NAME</label>
+                        <input type="text" name="l_name" value="" id="tbl_lastName" placeholder="Last Name" class="form-control" />
+                    </div>
+
+                    <div>
+                        <label>ADDRESS</label>
+                        <input type="text" name="a_address" value="" id="tbl_address" placeholder="Address" class="form-control" />
+                    </div>
+
+                    <div>
+                        <label>CONCTACT NUMBER</label>
+                        <input type="text" name="a_contact_num" value="" id="a_contact_num" placeholder="Contact Number" class="form-control" />
+                    </div>
+
+                    <div>
+                        <label>EMAIL</label>
+                        <input type="text" name="a_email_add" value="" id="tbl_email" placeholder="Email" class="form-control" />
+                    </div>
+
+                    <div>
+                        <label>USERNAME</label>
+                        <input type="text" name="a_user" value="" id="tbl_username" placeholder="Username" class="form-control" />
+                    </div>
+
+                    <div>
+                        <label>PASSWORD</label>
+                        <input type="text" name="a_pass" value="" id="tbl_password" placeholder="Password" class="form-control" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="saveBtn">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---Delete-->
+<div class="modal fade" id="delModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Information</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" name="userId" value="" id="delId" />
+                <h4>Do you want to Delete?</h4>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnDel">Delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<a href="@Url.Action("Print","User")" class="btn btn-info">Print</a><br /><br />
+
+<div class="table-responsive">
+    <table class="table" id="sceneTable">
+        <thead>
+            <tr>
+                <th>FULL NAME</th>
+                <th>ADDRESS</th>
+                <th>CONTACT NUMBER</th>
+                <th>EMAIL</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.f_name @item.m_name @item.l_name</td>
+                    <td>@item.a_address</td>
+                    <td>@item.a_contact_num</td>
+                    <td>@item.a_email_add</td>
+                    <td>
+                        <button class="btn btn-primary" data-target="#editModal" data-toggle="modal" onclick="edit(@item.Id)">Edit</button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#delModal" onclick="delData(@item.Id)">Delete</button>
+                        <a href="mailto:@item.a_email_add?subject=Multimedia-guide&body=Thanks for trusting our web application!" class="btn btn-info">Send Email</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/sweetalert2.js"></script>
+<script>
+    $(document).ready(() => {
+        $('#sceneTable').DataTable();
+    })
+</script>
+
+

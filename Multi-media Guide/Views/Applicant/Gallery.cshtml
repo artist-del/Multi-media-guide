@@ -1,0 +1,120 @@
+﻿@model IEnumerable<Multi_media_Guide.Models.video_tbl>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Multi-media Guide Interview</title>
+    <link href="~/Content/main/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Content/main/js/jquery-1.11.0.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="~/Content/main/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Tour Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--Google Fonts-->
+    <link href='//fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <!-- //end-smoth-scrolling -->
+    <link rel="stylesheet" href="~/Content/main/css/base.css">
+    <script src="~/Content/main/js/modernizr.min.js"></script>
+    <script src="~/Content/main/js/jquery.fitvids.js"></script>
+    <script src="~/Content/main/js/script.js"></script>
+    <!-- animated-css -->
+    <link href="~/Content/main/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="~/Content/main/js/wow.min.js"></script>
+    <script>
+		 new WOW().init();
+    </script>
+    <!-- animated-css -->
+</head>
+<body>
+    <!--header start here-->
+    <div class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo wow bounceInLeft" data-wow-delay="0.3s">
+                    <a href="#"><img src="~/Content/main/images/logo2.png" alt=""></a>
+                </div>
+                <div class="top-navg">
+                    <span class="menu"> <img src="~/Content/main/images/icon.png" alt="" /></span>
+                    <nav class="cl-effect-13">
+                        <ul class="res">
+                            <li><a href="@Url.Action("Index","Applicant")">Home</a></li>
+                            <li><a href="@Url.Action("About","Applicant")">About</a></li>
+
+                            <li><a class="active" href="@Url.Action("Gallery","Applicant")">Interviews</a></li>
+                            <li><a href="@Url.Action("Contact","Applicant")">Contact</a></li>
+                            <li><a href="@Url.Action("Logout","Applicant")">Logout</a></li>
+                            <li><p style="color: #ffd800; cursor: pointer;">Hi @Session["userId"]</p></li>
+                        </ul>
+                    </nav>
+                    <!-- script-for-menu -->
+                    <script>
+				   $( "span.menu" ).click(function() {
+					 $( "ul.res" ).slideToggle( 300, function() {
+					 // Animation complete.
+					  });
+					 });
+                    </script>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--content-->
+    <div class="gallery">
+        <div class="container">
+            <div class="galley-grid wow bounceInLeft" data-wow-delay="0.3s">
+                <h1>Information</h1>
+                <span class="lft-bar-gallery"> </span>
+                <span class="rit-bar-gallery"> </span>
+            </div>
+            <div class="project-top wow fadeInUp animated" data-wow-delay=".5s">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4 project">
+                        <div class="projectThumbnail">
+                            <div class="projectThumbnailHover projcet-ro">
+                                <h4>@item.v_title</h4>
+                                
+                            </div>
+                            <img src="~/AppFile/Scene/@item.image_path" alt="Project 01" class="img-responsive thumbnailImage" style="height: 200px !important; width: 100% !important;">
+                        </div>
+                        <div class="projectInfo">
+                            <div class="projectNavClose">
+                                <button class="closeButton"><img src="~/Content/main/images/cross.png" alt=""></button>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <h4>@item.v_title</h4>
+                            <p>
+                                @item.v_description
+                            </p>
+                            <p>
+                                @item.v_category
+                            </p>
+                            <a href="@item.v_video_link" target="_blank">View Content</a>
+                        </div>
+                    </div>
+                }
+                <div class="clearfix"> </div>
+
+            </div>
+        </div>
+    </div>
+    <!---->
+    <!--footer start here-->
+
+    <!--footer end here-->
+    <div class="copy-right wow bounceInLeft" data-wow-delay="0.3s">
+        <p> &copy; 2022 Multi-media Guide. All rights reserved |</p>
+    </div>
+</body>
+</html>
+

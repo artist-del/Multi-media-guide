@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "ChangePass";
+    Layout = "~/Views/Shared/_Navbar.cshtml";
+}
+
+<form action="ChangePass" method="post">
+<input type="hidden" name="Id" value="@ViewBag.id" />
+<div class="form-group">
+    <label>Your Name</label>
+    <input type="readonly" class="form-control" name="tbl_fName" placeholder="Your Name" value="@ViewBag.name" />
+</div>
+
+<div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control" placeholder="Username" name="a_username" value="@ViewBag.username" />
+</div>
+
+<div class="form-group">
+    <label>Password</label>
+    <input type="text" class="form-control" placeholder="Password" name="a_password" value="@ViewBag.password" />
+</div>
+
+<input type="submit" value="Save" class="btn btn-primary" />
+</form>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+

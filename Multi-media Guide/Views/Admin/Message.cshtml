@@ -1,0 +1,171 @@
+﻿@model IEnumerable<Multi_media_Guide.Models.tbl_message>
+@{
+    ViewBag.Title = "Message";
+    Layout = "~/Views/Shared/_Navbar.cshtml";
+}
+
+
+
+<style>
+    label {
+        color: black !important;
+        font-weight: bold;
+    }
+
+    .modal-header {
+        background-color: #1d1919 !important;
+    }
+
+        .modal-header h4 {
+            color: #ffffff;
+        }
+</style>
+<link href="~/Content/sweetalert2.css" rel="stylesheet" />
+<link href="~/Content/datatables.min.css" rel="stylesheet" />
+<script src="~/Scripts/datatables.min.js" defer></script>
+
+
+
+<!---Edit Modal-->
+<div class="modal fade" id="editModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Message</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form id="editForm">
+                    <input type="hidden" name="Id" value="" id="Ids" />
+
+                    <div class="form-group">
+                        <label>NAME</label>
+                        <input type="text" id="tbl_name" placeholder="Name" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>EMAIL ADDRESS</label>
+                        <input type="text" value="" id="tbl_email" placeholder="Email Address" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>MESSAGE</label>
+                        <textarea id="tbl_msg" class="form-control" rows="3" cols="20" placeholder="Message"></textarea>
+                    </div>
+
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---Delete-->
+<div class="modal fade" id="delModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Information</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" name="Id" value="" id="delId" />
+                <h4>Do you want to Delete?</h4>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnDel">Delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table" id="sceneTable">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.tbl_name</td>
+                    <td>@item.tbl_email</td>
+
+                    <td>
+                        <button class="btn btn-primary" data-target="#editModal" data-toggle="modal" onclick="view(@item.Id)">View</button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#delModal" onclick="delData(@item.Id)">Delete</button>
+                        <a href="mailto:@item.tbl_email?subject=Multimedia-guide&body=Thanks for trusting our web application!" class="btn btn-info">Send Email</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<script>
+    function view(data){
+        $.ajax({
+            type: 'get',
+            url: '/Admin/view_message?Id=' + data,
+            success: (e) => {
+                var obj = JSON.parse(e);
+
+                $('#tbl_name').val(obj.tbl_name);
+                $('#tbl_email').val(obj.tbl_email);
+                $('#tbl_msg').val(obj.tbl_msg);
+            }
+        })
+    }
+
+    function delData(data) {
+
+            $('#delId').val(data);
+
+    }
+
+    let btnDel = document.getElementById('btnDel');
+
+    btnDel.addEventListener('click', () => {
+        let data = $('#delId').val();
+
+        $.ajax({
+            type: 'post',
+            url: '/Admin/message_del?id=' + data,
+            success: (e) => {
+                if (e.status == true) {
+                    Swal.fire('Information', 'Message Deleted!', 'success').then(() => {
+                        window.location.href = '/Admin/Message';
+                    })
+                } else {
+                    Swal.fire('Warning', 'Something Wrong!', 'warning');
+                }
+            }
+
+        })
+    })
+</script>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/sweetalert2.js"></script>
+<script>
+    $(document).ready(() => {
+        $('#sceneTable').DataTable();
+    })
+</script>
+
+
+
+
+

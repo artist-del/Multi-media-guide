@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="job_interviewModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="f_name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="m_name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="l_name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="email_add" Type="varchar" MaxLength="150" />
+    <Property Name="a_username" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="a_password" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="applicant_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="f_name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="m_name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="l_name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="a_address" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="a_contact_num" Type="varchar" MaxLength="20" />
+    <Property Name="a_email_add" Type="varchar" MaxLength="150" />
+    <Property Name="a_user" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="a_pass" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_message">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tbl_name" Type="varchar" MaxLength="150" />
+    <Property Name="tbl_email" Type="varchar" MaxLength="150" />
+    <Property Name="tbl_msg" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="video_tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="v_title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="v_description" Type="varchar(max)" Nullable="false" />
+    <Property Name="v_category" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="v_video_link" Type="varchar(max)" />
+    <Property Name="image_path" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="job_interviewModelStoreContainer">
+    <EntitySet Name="admin_tbl" EntityType="Self.admin_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="applicant_tbl" EntityType="Self.applicant_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_message" EntityType="Self.tbl_message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="video_tbl" EntityType="Self.video_tbl" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

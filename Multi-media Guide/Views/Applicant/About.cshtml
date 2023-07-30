@@ -1,0 +1,116 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>About</title>
+    <link href="~/Content/main/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Content/main/js/jquery-1.11.0.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="~/Content/main/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Tour Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--Google Fonts-->
+    <link href='//fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <!-- //end-smoth-scrolling -->
+    <link rel="stylesheet" href="~/Content/main/css/flexslider.css" type="text/css" media="screen" />
+    <!-- animated-css -->
+    <link href="~/Content/main/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="~/Content/main/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- animated-css -->
+</head>
+<body>
+    <!--header start here-->
+    <div class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo wow bounceInLeft" data-wow-delay="0.3s">
+                    <a href="index.html"><img src="~/Content/main/images/logo2.png" alt=""></a>
+                </div>
+                <div class="top-navg">
+                    <span class="menu"> <img src="~/Content/main/images/icon.png" alt="" /></span>
+                    <nav class="cl-effect-13">
+                        <ul class="res">
+                            <li><a href="@Url.Action("Index", "Applicant")">Home</a></li>
+                            <li><a class="active" href="@Url.Action("About", "Applicant")">About</a></li>
+
+                            <li><a href="@Url.Action("Gallery", "Applicant")">Interviews</a></li>
+                            <li><a href="@Url.Action("Contact", "Applicant")">Contact</a></li>
+                            <li><a href="@Url.Action("Logout", "Applicant")">Logout</a></li>
+                            <li><p style="color: #ffd800; cursor: pointer;">Hi @Session["userId"]</p></li>
+                        </ul>
+                    </nav>
+                    <!-- script-for-menu -->
+                    <script>
+                        $("span.menu").click(function () {
+                            $("ul.res").slideToggle(300, function () {
+                                // Animation complete.
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about start here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <h1>About</h1>
+                <span class="lft-bar-about"> </span>
+                <span class="rit-bar-about"> </span>
+                <div class="col-md-6 about-left wow bounceInLeft" data-wow-delay="0.3s">
+                    <img src="~/Content/main/images/interview3.jpeg" alt="" class="img-responsive">
+                </div>
+                <div class="col-md-6 about-right wow bounceInRight" data-wow-delay="0.3s">
+                    <h4>ALL ABOUT IN MULTI-MEDIA GUIDE</h4>
+                    <p>
+                        The Multi-Media Guide Give you the rightful information about on the interview that you want it to know, its all about in the job information that you are searching for, you dont need to think want kind of preperation you need to do to yourself, thru the use of this web application you can easily find the interview that fit to the job hunting you want, so what are you waiting for just share this information to all your friend out there and check all the link in the description.
+                    </p>
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- FlexSlider -->
+    <script defer src="~/Content/main/js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+        });
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <!-- FlexSlider -->
+    <!--about end here-->
+    <!--footer start here-->
+
+    <!--footer end here-->
+    <div class="copy-right wow bounceInLeft" data-wow-delay="0.3s">
+        <p> &copy; 2022 Multi-media Guide. All rights reserved |</p>
+    </div>
+</body>
+</html>

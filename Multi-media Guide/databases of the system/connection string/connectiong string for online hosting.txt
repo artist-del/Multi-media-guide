@@ -1,0 +1,1 @@
+Server=sql.bsite.net\MSSQL2016;Database=michael1_;User Id=michael1_;Password=12345;MultipleActiveResultSets=true;

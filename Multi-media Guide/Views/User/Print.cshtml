@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Multi_media_Guide.Models.applicant_tbl>
+@{
+    ViewBag.Title = "Print";
+    Layout = "~/Views/Shared/_Navbar.cshtml";
+}
+
+<button class="btn btn-info" onclick="print()">Print Data</button><br /><br />
+
+<script>
+    function print() {
+        var printMe = document.getElementById('sceneTable');
+        var wme = window.open("", "", "width = 900, height = 700");
+        wme.document.write(printMe.outerHTML);
+        wme.document.close();
+        wme.focus();
+        wme.print();
+        wme.close();
+
+    }
+</script>
+
+<div class="table table-responsive">
+    <table class="table" id="sceneTable">
+        <thead>
+            <tr>
+                <th>FULL NAME</th>
+                <th>ADDRESS</th>
+                <th>CONTACT NUMBER</th>
+                <th>EMAIL</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.f_name @item.m_name @item.l_name</td>
+                    <td>@item.a_address</td>
+                    <td>@item.a_contact_num</td>
+                    <td>@item.a_email_add</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+

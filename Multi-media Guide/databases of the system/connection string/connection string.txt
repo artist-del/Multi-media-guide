@@ -1,0 +1,1 @@
+data source=LAPTOP-I37SNUR8\SQLEXPRESS;initial catalog=job_interview;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework

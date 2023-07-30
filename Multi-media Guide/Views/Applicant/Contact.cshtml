@@ -1,0 +1,122 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Multi-media Guide Contacts</title>
+    <link href="~/Content/main/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Content/main/js/jquery-1.11.0.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="~/Content/main/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Tour Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--Google Fonts-->
+    <link href='//fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <!-- //end-smoth-scrolling -->
+    <!-- animated-css -->
+    <link href="~/Content/main/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="~/Content/main/js/wow.min.js"></script>
+    <script>
+		 new WOW().init();
+    </script>
+    <!-- animated-css -->
+</head>
+<body>
+    <!--header start here-->
+    <div class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo wow bounceInLeft" data-wow-delay="0.3s">
+                    <a href="index.html"><img src="~/Content/main/images/logo2.png" alt=""></a>
+                </div>
+                <div class="top-navg">
+                    <span class="menu"> <img src="~/Content/main/images/icon.png" alt="" /></span>
+                    <nav class="cl-effect-13">
+                        <ul class="res">
+                            <li><a href="@Url.Action("Index","Applicant")">Home</a></li>
+                            <li><a href="@Url.Action("About","Applicant")">About</a></li>
+
+                            <li><a href="@Url.Action("Gallery","Applicant")">Interviews</a></li>
+                            <li><a class="active" href="@Url.Action("Contact","Applicant")">Contact</a></li>
+                            <li><a href="@Url.Action("Logout","Applicant")">Logout</a></li>
+                            <li><p style="color: #ffd800; cursor: pointer;">Hi @Session["userId"]</p></li>
+                        </ul>
+                    </nav>
+                    <!-- script-for-menu -->
+                    <script>
+				   $( "span.menu" ).click(function() {
+					 $( "ul.res" ).slideToggle( 300, function() {
+					 // Animation complete.
+					  });
+					 });
+                    </script>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--contact -->
+    <div class="contact">
+        <div class="container">
+            <div class="contact-main">
+                <div class="contact-top">
+                    <h1>Contact</h1>
+                    <span class="lft-bar-contact"> </span>
+                    <span class="rit-bar-contact"> </span>
+                </div>
+                <div class="contact-bottom">
+                    <div class="col-md-6 contact-left wow bounceInLeft" data-wow-delay="0.3s">
+                        <!--contact-form-->
+                        @if ("true" == ViewBag.message)
+                        {
+                            <div class="alert alert-success">Your message sent!</div>
+                        }
+                        <form method="post">
+                            <p class="your-para">Your Name :</p>
+                            <input type="text" name="tbl_name" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+                            <p class="your-para">Your Mail :</p>
+                            <input type="text" name="tbl_email" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+                            <p class="your-para">Your Message :</p>
+                            <textarea cols="77" name="tbl_msg" rows="6" onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}"></textarea>
+                            <ul class="actions">
+                                <li><input type="submit" class="style1" value="Send" /></li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="col-md-6 contact-info wow bounceInRight" data-wow-delay="0.3s">
+                        <h2>How Can We Help?</h2>
+                        <p>Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is ready to answer all your questions.</p>
+                        <div class="con-text">
+                            <h3><i class="icon glyphicon glyphicon-home"></i> Address</h3>
+                            <address>
+                                <p>RSU Cajidiocan</p>
+                                <p>Sugod, Cajidiocan, Romblon</p>
+
+                                <p>Ph : +639312456789</p>
+                            </address>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//contact-->
+    <!--footer start here-->
+ 
+    <!--footer end here-->
+    <div class="copy-right wow bounceInLeft" data-wow-delay="0.3s">
+        <p> &copy; 2022 Multi-media Guide. All rights reserved |</p>
+    </div>
+</body>
+</html>

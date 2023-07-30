@@ -1,0 +1,1 @@
+workstation id=jobinterview.mssql.somee.com;packet size=4096;user id=michael1_SQLLogin_1;pwd=r3yyfch7d1;data source=jobinterview.mssql.somee.com;persist security info=False;initial catalog=jobinterview

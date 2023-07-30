@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="job_interviewModelStoreContainer" CdmEntityContainer="job_interviewEntities">
+    <EntitySetMapping Name="admin_tbl">
+      <EntityTypeMapping TypeName="job_interviewModel.admin_tbl">
+        <MappingFragment StoreEntitySet="admin_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="f_name" ColumnName="f_name" />
+          <ScalarProperty Name="m_name" ColumnName="m_name" />
+          <ScalarProperty Name="l_name" ColumnName="l_name" />
+          <ScalarProperty Name="email_add" ColumnName="email_add" />
+          <ScalarProperty Name="a_username" ColumnName="a_username" />
+          <ScalarProperty Name="a_password" ColumnName="a_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="applicant_tbl">
+      <EntityTypeMapping TypeName="job_interviewModel.applicant_tbl">
+        <MappingFragment StoreEntitySet="applicant_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="f_name" ColumnName="f_name" />
+          <ScalarProperty Name="m_name" ColumnName="m_name" />
+          <ScalarProperty Name="l_name" ColumnName="l_name" />
+          <ScalarProperty Name="a_address" ColumnName="a_address" />
+          <ScalarProperty Name="a_contact_num" ColumnName="a_contact_num" />
+          <ScalarProperty Name="a_email_add" ColumnName="a_email_add" />
+          <ScalarProperty Name="a_user" ColumnName="a_user" />
+          <ScalarProperty Name="a_pass" ColumnName="a_pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="video_tbl">
+      <EntityTypeMapping TypeName="job_interviewModel.video_tbl">
+        <MappingFragment StoreEntitySet="video_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="v_title" ColumnName="v_title" />
+          <ScalarProperty Name="v_description" ColumnName="v_description" />
+          <ScalarProperty Name="v_category" ColumnName="v_category" />
+          <ScalarProperty Name="v_video_link" ColumnName="v_video_link" />
+          <ScalarProperty Name="image_path" ColumnName="image_path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_message">
+      <EntityTypeMapping TypeName="job_interviewModel.tbl_message">
+        <MappingFragment StoreEntitySet="tbl_message">
+          <ScalarProperty Name="tbl_msg" ColumnName="tbl_msg" />
+          <ScalarProperty Name="tbl_email" ColumnName="tbl_email" />
+          <ScalarProperty Name="tbl_name" ColumnName="tbl_name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

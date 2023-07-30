@@ -1,0 +1,57 @@
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\ApplicationInsights.config
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\csc.exe
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\vbc.exe
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\VBCSCompiler.exe
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Multi-media Guide.dll.config
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Multi-media Guide.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Multi-media Guide.pdb
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Antlr3.Runtime.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\EntityFramework.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\EntityFramework.SqlServer.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.Web.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Newtonsoft.Json.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.Helpers.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.Mvc.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.Optimization.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.Razor.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.WebPages.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.WebPages.Razor.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\WebGrease.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\EntityFramework.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\EntityFramework.SqlServer.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.Web.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.Helpers.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.Mvc.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.Optimization.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.Razor.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.WebPages.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\System.Web.WebPages.Razor.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Antlr3.Runtime.pdb
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\bin\Newtonsoft.Json.xml
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\obj\Debug\Multi-media Guide.csprojResolveAssemblyReference.cache
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\obj\Debug\Multi-media Guide.dll
+C:\Users\ARTZ AYATE RASE\Documents\Capstone Project 2022\Multi-media guide -michael john\Multi-media Guide\Multi-media Guide\obj\Debug\Multi-media Guide.pdb

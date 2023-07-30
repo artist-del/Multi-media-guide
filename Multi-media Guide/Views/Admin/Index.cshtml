@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Navbar.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <br />
+        <h4><b>About</b></h4>
+        <br />
+        <p>This Multi-media Guide system was made to help all the application to prepare there selves to the future work!</p>
+    </div>
+
+    <div class="col-md-6">
+        <h3>Applicant List</h3>
+        <div class="table table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.list)
+                    {
+                        <tr>
+                            <td>@item.f_name @item.m_name @item.l_name</td>
+                            <td>@item.a_address</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
